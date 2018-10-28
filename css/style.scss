@@ -1,0 +1,286 @@
+html, body {
+    width   : 100%;
+    height  : 100%;
+    margin  : 0;
+    display : flex;
+}
+
+.container-left {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  z-index: 2;
+  background-color : #fff;
+  background-size  : cover;
+
+    nav {
+        width: 100%;
+        height: 70px;
+        padding: 10px;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+
+        .logo {
+            widows: 50px;
+            height: 50px;
+            margin: auto;
+            padding : 10px;
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-content: center;
+
+            li {
+                width: 100%;
+                height: 25px;
+                margin: auto;
+                display: flex;
+
+                &:hover {
+                    color: #4488FF;
+                }
+
+                a {
+                    width: 100%;
+                    color:#647292;
+                    text-align: center;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #4488FF;
+                    }
+                }
+            }
+            .active {
+                border-bottom: 2px solid #4488FF;
+
+                a {
+                    color: #5F99FF;
+                }
+            }
+        }
+
+        svg {
+            display: none;
+            padding: 10px;
+        }
+
+        .mobile {
+            display: none;
+        }
+    }
+
+    section {
+        width: 80%;
+        height: 60%;
+        margin: auto;
+        align-content: center;
+
+        h1 {
+            width: 100%;
+            margin: 4px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 48px;
+        }
+
+        p {
+            margin: 0 0 50px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #647292;
+            display     : flex;
+            font-size   : 14px;
+        }
+
+        .password {
+            width: 100%;
+
+            a {
+                margin: auto;
+                margin-top: 25px;
+                color: #C7CBD5;
+                text-decoration: none;
+                font-style: italic;
+            }
+        }
+
+        .radius {
+            width: 150%;
+            height: 58px;
+            margin: 10px;
+            border-radius: 29px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px 0px grey;
+
+            form {
+                width: 110%;
+                height: 42px;
+                display: flex;
+
+                svg {
+                    margin: 4px 20px 2px 20px;
+                }
+
+                input {
+                    width: 80%;
+                    height: 58px;
+                    border: 0px solid;
+                    font-size: 18px;
+                    background-color: transparent;
+                }
+
+                button {
+                    width: 150px;
+                    height: 50px;
+                    margin: 4px;
+                    border: 0px solid;
+                    border-radius: 29px;
+                    text-align: center;
+                    background-color: #50E3C2;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: white;
+                    box-shadow: 0px 0px 10px 0px grey;
+                }
+            }
+        }
+    }
+}
+
+.container-right {
+    display: flex;
+    flex: 1.5;
+    z-index: 1;
+    background-image: url('../image/right.png');
+    background-size: cover;
+}
+
+@media screen and (max-width: 410px) {
+
+    .container-left {
+
+        section {
+
+            .radius {
+
+                form {
+
+                    svg {
+                        display: flex;
+                        margin: 4px 10px;
+                    }
+
+                    input {
+                        margin-left: 5px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 765px) {
+    
+    .container-right {
+        display: none;
+    }
+
+    .container-left {
+        background-image: url("../image/background.svg");
+        background-position: center;
+
+        nav {
+            justify-content: space-between;
+
+            .back-color {
+                width: 100%;
+                height: 100%;
+                background-color: #CCFFF4;
+                z-index: 2;
+            }
+
+            svg {
+                margin: auto 0;
+                display: flex;
+                right: 0;
+                z-index: 2;
+                background-color: #CCFFF4;
+            }
+
+            .logo {
+                margin: auto 0;
+                z-index: 2;
+                background-color: #CCFFF4;
+            }
+
+            ul {
+                display: none;
+            }
+
+            .mobile-menu {
+                z-index: 1;
+                background-color: #fff;
+
+                display: none;
+                align-items: center;
+                justify-content: space-around;
+                position: fixed;
+                margin-top: 70px;
+                width: 100%;
+
+                ul {
+                    display: flex;
+                    padding: 0;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-direction: column;
+
+                    li {
+                        margin: 20px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        section {
+
+            div {
+                display: flex;
+                margin-bottom: 50px;
+
+                p {
+                    margin: 0 auto;
+                }
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .radius {
+                margin: 0;
+                width: 100%;
+                margin-bottom: 120px;
+
+                form {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    input {
+                        width: 70%;
+                    }
+
+                    button {
+                        margin: 40px auto;
+                    }
+                }
+            }
+        }
+    }
+}

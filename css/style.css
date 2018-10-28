@@ -1,0 +1,302 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  z-index: 2;
+  background-color: #fff;
+  background-size: cover;
+}
+
+.container-left nav {
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-left nav .logo {
+  widows: 50px;
+  height: 50px;
+  margin: auto;
+  padding: 10px;
+}
+
+.container-left nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.container-left nav ul li {
+  width: 100%;
+  height: 25px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-left nav ul li:hover {
+  color: #4488FF;
+}
+
+.container-left nav ul li a {
+  width: 100%;
+  color: #647292;
+  text-align: center;
+  text-decoration: none;
+}
+
+.container-left nav ul li a:hover {
+  color: #4488FF;
+}
+
+.container-left nav ul .active {
+  border-bottom: 2px solid #4488FF;
+}
+
+.container-left nav ul .active a {
+  color: #5F99FF;
+}
+
+.container-left nav svg {
+  display: none;
+  padding: 10px;
+}
+
+.container-left nav .mobile {
+  display: none;
+}
+
+.container-left section {
+  width: 80%;
+  height: 60%;
+  margin: auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.container-left section h1 {
+  width: 100%;
+  margin: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 48px;
+}
+
+.container-left section p {
+  margin: 0 0 50px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #647292;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+}
+
+.container-left section .password {
+  width: 100%;
+}
+
+.container-left section .password a {
+  margin: auto;
+  margin-top: 25px;
+  color: #C7CBD5;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.container-left section .radius {
+  width: 150%;
+  height: 58px;
+  margin: 10px;
+  border-radius: 29px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 10px 0px grey;
+          box-shadow: 0px 0px 10px 0px grey;
+}
+
+.container-left section .radius form {
+  width: 110%;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-left section .radius form svg {
+  margin: 4px 20px 2px 20px;
+}
+
+.container-left section .radius form input {
+  width: 80%;
+  height: 58px;
+  border: 0px solid;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.container-left section .radius form button {
+  width: 150px;
+  height: 50px;
+  margin: 4px;
+  border: 0px solid;
+  border-radius: 29px;
+  text-align: center;
+  background-color: #50E3C2;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  -webkit-box-shadow: 0px 0px 10px 0px grey;
+          box-shadow: 0px 0px 10px 0px grey;
+}
+
+.container-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+  z-index: 1;
+  background-image: url("../image/right.png");
+  background-size: cover;
+}
+
+@media screen and (max-width: 410px) {
+  .container-left section .radius form svg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 4px 10px;
+  }
+  .container-left section .radius form input {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .container-right {
+    display: none;
+  }
+  .container-left {
+    background-image: url("../image/background.svg");
+    background-position: center;
+  }
+  .container-left nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .container-left nav .back-color {
+    width: 100%;
+    height: 100%;
+    background-color: #CCFFF4;
+    z-index: 2;
+  }
+  .container-left nav svg {
+    margin: auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    right: 0;
+    z-index: 2;
+    background-color: #CCFFF4;
+  }
+  .container-left nav .logo {
+    margin: auto 0;
+    z-index: 2;
+    background-color: #CCFFF4;
+  }
+  .container-left nav ul {
+    display: none;
+  }
+  .container-left nav .mobile-menu {
+    z-index: 1;
+    background-color: #fff;
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: fixed;
+    margin-top: 70px;
+    width: 100%;
+  }
+  .container-left nav .mobile-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container-left nav .mobile-menu ul li {
+    margin: 20px;
+    text-transform: uppercase;
+  }
+  .container-left section div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .container-left section div p {
+    margin: 0 auto;
+  }
+  .container-left section h1 {
+    text-align: center;
+  }
+  .container-left section .radius {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 120px;
+  }
+  .container-left section .radius form {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container-left section .radius form input {
+    width: 70%;
+  }
+  .container-left section .radius form button {
+    margin: 40px auto;
+  }
+}
